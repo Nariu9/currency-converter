@@ -1,0 +1,20 @@
+<div class="mat-typography main">
+  <div *ngIf="!currencies.length; else converter" class="spinner">
+    <mat-spinner diameter="50"></mat-spinner>
+  </div>
+  <ng-template #converter>
+    <mat-card>
+      <mat-card-header class="cardHeader">
+        <conv-header [usdRate]="usdRate" [eurRate]="eurRate"></conv-header>
+      </mat-card-header>
+      <mat-card-content>
+        <conv-content [currencies]="currencies" [amount1]="amount1" [amount2]="amount2"
+                      [currency1]="currency1" [currency2]="currency2"
+                      (sendAmount1Event)="changeAmount1Handler($event)"
+                      (sendCurrency1Event)="changeCurrency1Handler($event)"
+                      (sendAmount2Event)="changeAmount2Handler($event)"
+                      (sendCurrency2Event)="changeCurrency2Handler($event)"></conv-content>
+      </mat-card-content>
+    </mat-card>
+  </ng-template>
+</div>

@@ -1,0 +1,16 @@
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+
+  .cardHeader {
+    display: block;
+  }
+}
