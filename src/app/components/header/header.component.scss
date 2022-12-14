@@ -1,0 +1,14 @@
+.spinner {
+  width: 320px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+}
+
+.rates {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font: 400 18px/30px Roboto, sans-serif;
+  letter-spacing: .009375em;
+}

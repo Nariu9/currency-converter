@@ -1,0 +1,14 @@
+.toolbar {
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+
+  .cardHeader {
+    display: block;
+  }
+}
