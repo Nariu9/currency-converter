@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
+import {environment} from '../../environments/environment';
 
 export interface Rates {
   AED: number;
@@ -189,7 +190,7 @@ export interface ResponseData {
 export class CurrencyService {
 
   httpOptions = {
-    headers: {'apikey': '1R6Hm3YutBLj223zCwWCx7SQuYApnHFM'},
+    headers: {'apikey': environment.apiKey},
     withCredentials: true
   }
 
@@ -197,6 +198,6 @@ export class CurrencyService {
   }
 
   getData(): Observable<ResponseData> {
-    return this.http.get<ResponseData>('https://api.apilayer.com/exchangerates_data/latest?base=UAH', this.httpOptions)
+    return this.http.get<ResponseData>(`${environment.baseURL}/latest?base=UAH`, this.httpOptions)
   }
 }
