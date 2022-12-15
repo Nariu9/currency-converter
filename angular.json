@@ -20,6 +20,7 @@
             "outputPath": "dist/currency-converter",
             "index": "src/index.html",
             "main": "src/main.ts",
+            "baseHref": "/currency-converter/",
             "polyfills": [
               "zone.js"
             ],
@@ -99,6 +100,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
